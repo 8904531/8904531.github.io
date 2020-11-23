@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            0氪or微氪的升级路线 | MapleStory小屋
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">MapleStory小屋</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">Overview</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">About</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Home</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Tags</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Categories</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Archives</div>
+                </a>
+            
+                
+                <a href="/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">About</div>
+                </a>
+            
+                
+                <a target="_blank" rel="noopener" href="https://www.neoska.me/link.html" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Link表</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">Night Mode</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/icons/avatar.gif"/>
+                
+            </div>
+            <div class="sidebar-author-name">MAO486</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:mao486@vip.qq.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Links</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a target="_blank" rel="noopener" href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/2020/11/22/Lvup_0/">0氪or微氪的升级路线</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2020-11-22
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;2020-11-22
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;<a class="category-link" href="/categories/%E5%8D%87%E7%BA%A7/">升级</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        Views:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=0氪or微氪的升级路线&url=https://maplestory.84861540.online/2020/11/22/Lvup_0/&pic=https://maplestory.84861540.online/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=0氪or微氪的升级路线&url=https://maplestory.84861540.online/2020/11/22/Lvup_0/&via=MAO486" target="_blank" class="mdui-ripple">Share to Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://maplestory.84861540.online/2020/11/22/Lvup_0/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://maplestory.84861540.online/2020/11/22/Lvup_0/" target="_blank" class="mdui-ripple">Share to Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://maplestory.84861540.online/2020/11/22/Lvup_0/&title=0氪or微氪的升级路线" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=MapleStory小屋&title=0氪or微氪的升级路线&summary=&pics=https://maplestory.84861540.online/null&url=https://maplestory.84861540.online/2020/11/22/Lvup_0/" target="_blank" class="mdui-ripple">Share to QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://maplestory.84861540.online/2020/11/22/Lvup_0/&text=0氪or微氪的升级路线" target="_blank" class="mdui-ripple">Share to Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/%E7%BB%83%E7%BA%A7/ >练级</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <p>算是给自己留个方便查询的攻略，有补充可添加！</p>
+<a id="more"></a>
+
+<blockquote>
+<p>参考|网络＋群分享文档＋各种大佬建议</p>
+</blockquote>
+<h1 id="经验加成道具"><a href="#经验加成道具" class="headerlink" title="经验加成道具"></a>经验加成道具</h1><h3 id="付费的"><a href="#付费的" class="headerlink" title="付费的"></a>付费的</h3><ul>
+<li>① 拍卖的+10%  經驗累積的秘藥</li>
+<li>② 注意看喇叭有没有人免费放  天氣，没有就喇叭问  徵天氣（天氣|+50%经验）</li>
+<li>③ 喇叭问  徵輪7燒（輪|輪回碑石，加怪数量、减怪cd；7|主教的祈祷，+50%经验；燒|燃燒戒指，提升燃烧地图的等级）</li>
+<li>④ 商城的  經驗值2倍券</li>
+<li>⑤ 3只经验宠物</li>
+<li>⑥ 幽暗戒指（拉附近最多15个怪，3秒cd）</li>
+<li>⑦ 苦行戒指（伤害-30%，+15%经验）</li>
+</ul>
+<h3 id="免费的"><a href="#免费的" class="headerlink" title="免费的"></a>免费的</h3><ul>
+<li>① 140级的link——战神+龙神+双弩</li>
+<li>② 180级的角色卡——神子</li>
+<li>③ 联盟战地拼图</li>
+<li>④ 怪物公园的+10%经验药</li>
+<li>⑤ 怪物公园的星期日箱子开1.5或2倍经验卡</li>
+<li>⑥ hd商店的2倍经验卡</li>
+<li>⑦ 联盟战地商店的经验药和经验卡</li>
+<li>⑧ 武陵道场商店 / 怪物公园的星期日箱子 / 活动商店的精灵坠饰</li>
+<li>⑨ 十字旅团的+3%经验  真·降魔的十字旅團的戒指</li>
+<li>⑩ +10%经验  伊露納耳環 / 項鍊（耳环项链同时装备，只生效1个，目前绝版）</li>
+</ul>
+<p><code>怪物公园、hd商店、联盟战地商店的经验加成道具不可叠加</code></p>
+<h3 id="升级的图一般要符合以下几个条件"><a href="#升级的图一般要符合以下几个条件" class="headerlink" title="升级的图一般要符合以下几个条件"></a>升级的图一般要符合以下几个条件</h3><ul>
+<li>小图或者单线图或者有传送门</li>
+<li>多怪</li>
+<li>没有工作室</li>
+<li>能秒怪</li>
+<li>能秒怪的话尽量是星图</li>
+<li>斗燃阶段高.</li>
+</ul>
+<h1 id="练级纯刷图路线"><a href="#练级纯刷图路线" class="headerlink" title="练级纯刷图路线"></a>练级纯刷图路线</h1><h3 id="10-200"><a href="#10-200" class="headerlink" title="10-200"></a>10-200</h3><table>
+<thead>
+<tr>
+<th>等級</th>
+<th>地圖名稱</th>
+<th>星力</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10-30</td>
+<td>綠樹的藤條</td>
+<td></td>
+</tr>
+<tr>
+<td>30-50</td>
+<td>大波浪</td>
+<td></td>
+</tr>
+<tr>
+<td>50-60</td>
+<td>寧靜的沼澤</td>
+<td></td>
+</tr>
+<tr>
+<td>60-70</td>
+<td>天空階梯Ⅰ</td>
+<td></td>
+</tr>
+<tr>
+<td>70-80</td>
+<td>沉睡 / 睡夢沙漠</td>
+<td></td>
+</tr>
+<tr>
+<td>80-90</td>
+<td>閑人勿入</td>
+<td></td>
+</tr>
+<tr>
+<td>90-100</td>
+<td>神木村西邊森林</td>
+<td></td>
+</tr>
+<tr>
+<td>100-110</td>
+<td>天空之巢Ⅱ</td>
+<td>5</td>
+</tr>
+<tr>
+<td>110-120</td>
+<td>扭曲的迴廊</td>
+<td>28</td>
+</tr>
+<tr>
+<td>120-130</td>
+<td>試煉的洞穴1</td>
+<td>55</td>
+</tr>
+<tr>
+<td>130-140</td>
+<td>黑翼龍巢穴</td>
+<td>65</td>
+</tr>
+<tr>
+<td>140-150</td>
+<td>2樓咖啡廳&lt;4&gt;</td>
+<td>80</td>
+</tr>
+<tr>
+<td>150-165</td>
+<td>5樓化妝品店&lt;4&gt;</td>
+<td>80</td>
+</tr>
+<tr>
+<td>165-180</td>
+<td>走廊H01 / 3</td>
+<td>140</td>
+</tr>
+<tr>
+<td>180-200</td>
+<td>被遺棄的挖掘地區2 / 4</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="200-275"><a href="#200-275" class="headerlink" title="200-275"></a>200-275</h3><blockquote>
+<p>转载自巴哈姆特Elxest、liueli1999</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>等級</th>
+<th>怪物名稱</th>
+<th>地圖</th>
+<th>傳送入口</th>
+<th>星力</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>200-210</td>
+<td>強悍的靈魂艾爾達斯</td>
+<td>消逝的旅途</td>
+<td>隱藏的火焰地帶</td>
+<td>80</td>
+</tr>
+<tr>
+<td>200-210</td>
+<td>安息的艾爾達斯</td>
+<td>消逝的旅途</td>
+<td>洞穴下側</td>
+<td>60</td>
+</tr>
+<tr>
+<td>210-220</td>
+<td>普利溫</td>
+<td>啾啾艾爾蘭</td>
+<td>正園森林1</td>
+<td>100</td>
+</tr>
+<tr>
+<td>210-220</td>
+<td>鳳梨鹿兒</td>
+<td>啾啾艾爾蘭</td>
+<td>園林入口</td>
+<td>100</td>
+</tr>
+<tr>
+<td>210-220</td>
+<td>生氣的普利溫、成熟的鳥普洛</td>
+<td>啾啾艾爾蘭</td>
+<td>激流地帶3</td>
+<td>100</td>
+</tr>
+<tr>
+<td>220-225</td>
+<td>卡魯斯</td>
+<td>拉契爾恩</td>
+<td>雞群遊樂場2</td>
+<td>210</td>
+</tr>
+<tr>
+<td>220-225</td>
+<td>跳舞的紅皮鞋</td>
+<td>拉契爾恩</td>
+<td>跳舞鞋佔領地2</td>
+<td>210</td>
+</tr>
+<tr>
+<td>220-225</td>
+<td>狂放的舞會居民、生氣的舞會居民</td>
+<td>拉契爾恩</td>
+<td>顯露本色之處3</td>
+<td>210</td>
+</tr>
+<tr>
+<td>225-250</td>
+<td>混沌精靈</td>
+<td>阿爾卡娜</td>
+<td>洞穴的下路</td>
+<td>360</td>
+</tr>
+<tr>
+<td>225-250</td>
+<td>閃電雲精靈、冰雹雲精靈</td>
+<td>阿爾卡娜</td>
+<td>霜與雷之森</td>
+<td>320</td>
+</tr>
+<tr>
+<td>230-250</td>
+<td>被儀式捲走的錘子兵、被儀式捲走的禁衛兵</td>
+<td>魔菈斯</td>
+<td>那天的特雷亞非2</td>
+<td>520</td>
+</tr>
+<tr>
+<td>235-250</td>
+<td>黑蜘蛛</td>
+<td>艾斯佩拉</td>
+<td>鏡光大海2</td>
+<td>600</td>
+</tr>
+<tr>
+<td>235-250</td>
+<td>黑蜘蛛、蜘蛛女</td>
+<td>艾斯佩拉</td>
+<td>鏡光大海3</td>
+<td>600</td>
+</tr>
+<tr>
+<td>235-250</td>
+<td>蜘蛛女</td>
+<td>艾斯佩拉</td>
+<td>鏡光大海4</td>
+<td>600</td>
+</tr>
+<tr>
+<td>245-250</td>
+<td>虛空的爪牙、黃昏的爪牙</td>
+<td>月之橋</td>
+<td>虛空海浪3</td>
+<td>730</td>
+</tr>
+<tr>
+<td>250-255</td>
+<td>黑暗的失敗之作、黑暗的被造物</td>
+<td>苦痛迷宮</td>
+<td>苦痛迷宮內部5</td>
+<td>760</td>
+</tr>
+<tr>
+<td>255-275</td>
+<td>奧塞西翁、普歐維里</td>
+<td>利曼</td>
+<td>世界終結之處1-5</td>
+<td>880</td>
+</tr>
+</tbody></table>
+<h1 id="从零开始的萌新练级"><a href="#从零开始的萌新练级" class="headerlink" title="从零开始的萌新练级"></a>从零开始的萌新练级</h1><h3 id="开荒职业推荐"><a href="#开荒职业推荐" class="headerlink" title="开荒职业推荐"></a>开荒职业推荐</h3><p>战神（狂狼）：需要保持连击，比较废手</p>
+<p>白毛（恶魔复仇者）：一键操作、被动吸血自动回血、只要HP药</p>
+<p>前期刷痕迹，刷够痕迹买Link套装（详情请见另一篇<code>暂时没写</code>）</p>
+<h3 id="刷副本练级路线"><a href="#刷副本练级路线" class="headerlink" title="刷副本练级路线"></a>刷副本练级路线</h3><p>前60级主要是主线任务跟副本（从灯泡接取）</p>
+<p><code>建议60级的时候去奇幻城（六岔路口士兵旁边的传送点，国译林中之城）刷土龙，开U向导的地图传送，以后会经常用到这个路线来进行传图</code></p>
+<p><code>U向导→60：土龙→六岔路口→顶端的万神殿→万神殿传送</code></p>
+<table>
+<thead>
+<tr>
+<th>副本等级</th>
+<th>副本名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>30</td>
+<td>妖精学院</td>
+</tr>
+<tr>
+<td>45</td>
+<td>黄金海岸</td>
+</tr>
+<tr>
+<td>50</td>
+<td>里艾那海峡</td>
+</tr>
+<tr>
+<td>60（不够70可以做）</td>
+<td>秘密森林埃羅汀</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>等级</th>
+<th>地图</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>70-80</td>
+<td>日落之路：沉睡沙漠</td>
+</tr>
+<tr>
+<td>90</td>
+<td>神木村：神木村西邊森林（左边就是了）</td>
+</tr>
+<tr>
+<td>100-110</td>
+<td>神木村：天空之巢Ⅱ</td>
+</tr>
+<tr>
+<td>110-120</td>
+<td>神木村：暗黑半人馬領土</td>
+</tr>
+</tbody></table>
+<p>LINK必练红(恶魔猎手)白毛(恶魔复仇者)尖兵,超能,战神,阴阳师(台服刷钱小能手),夜光,幻影,林之灵,剑豪</p>
+<p>重点提示:开荒别玩神之子!!!!!!!!!!创个角色就好了!大后期玩的职业,前期累死!</p>
+<p>其余小问题,如盖章传送,刷满该地图所需怪物数量就可以自动盖章了~（向导的地图那边会有个红红的盖）</p>
+<h1 id="升级路线简化版"><a href="#升级路线简化版" class="headerlink" title="升级路线简化版"></a>升级路线简化版</h1><h3 id="有轮有Link套路线"><a href="#有轮有Link套路线" class="headerlink" title="有轮有Link套路线"></a>有轮有Link套路线</h3><table>
+<thead>
+<tr>
+<th>等级</th>
+<th>地点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1-30</td>
+<td>格兰蒂斯-野蛮之星-垃圾场-垃圾场寂静之处</td>
+</tr>
+<tr>
+<td>30-50</td>
+<td>格兰蒂斯-野蛮之星-废弃建筑物-Mr.海查德的区域3</td>
+</tr>
+<tr>
+<td>50-70</td>
+<td>林中之城-沼泽-宁静的沼泽</td>
+</tr>
+<tr>
+<td>70-85</td>
+<td>尼哈沙漠-日落之路-沉睡沙漠</td>
+</tr>
+<tr>
+<td>85-100</td>
+<td>神木村-神木村西边森林</td>
+</tr>
+<tr>
+<td>100-110</td>
+<td>神木村-天空之巢II</td>
+</tr>
+<tr>
+<td>110-125</td>
+<td>玩具城-遗忘的回廊</td>
+</tr>
+<tr>
+<td>125-145</td>
+<td>冰封雪域-试炼的洞穴1</td>
+</tr>
+<tr>
+<td>145-170</td>
+<td>废弃都市-星光之塔-6楼发廊&lt;4&gt;</td>
+</tr>
+<tr>
+<td>170-180,180-200</td>
+<td>玩具城-UFO内部-走廊H01</td>
+</tr>
+<tr>
+<td>180-200</td>
+<td>被遗弃的挖掘地区2<code>如果你秒不了玩具城的外星人</code></td>
+</tr>
+<tr>
+<td>200-210</td>
+<td>无名村-无名村洞穴下侧</td>
+</tr>
+<tr>
+<td>210-220</td>
+<td>啾啾村-揪乐森林深处</td>
+</tr>
+<tr>
+<td>220-225</td>
+<td>拉克兰-显露本色之处3</td>
+</tr>
+<tr>
+<td>225-250</td>
+<td>阿尔卡纳-洞穴的下路</td>
+</tr>
+</tbody></table>
+<h3 id="伤害较低的疾跑路线"><a href="#伤害较低的疾跑路线" class="headerlink" title="伤害较低的疾跑路线"></a>伤害较低的疾跑路线</h3><table>
+<thead>
+<tr>
+<th>等级</th>
+<th>地图</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1-30</td>
+<td>魔法密林-北部森林-绿树的藤条</td>
+</tr>
+<tr>
+<td>30-35</td>
+<td>黄金海岸-黄金海岸海边2</td>
+</tr>
+<tr>
+<td>35-50</td>
+<td>黄金海岸-大波浪</td>
+</tr>
+<tr>
+<td>50-70</td>
+<td>林中之城-沼泽-宁静的沼泽</td>
+</tr>
+<tr>
+<td>70-80</td>
+<td>尼哈沙漠-日落之路-沉睡沙漠</td>
+</tr>
+<tr>
+<td>80-90</td>
+<td>玛加提亚-隐藏地图-闲人勿入<code>研究所C-2，从左往右第二个传送点进入</code></td>
+</tr>
+<tr>
+<td>90-100</td>
+<td>神木村-神木村西边森林</td>
+</tr>
+<tr>
+<td>100-110</td>
+<td>玩具城-天空露台&lt;2&gt;</td>
+</tr>
+<tr>
+<td>110-125</td>
+<td>玩具城-遗忘的回廊<code>备选：扭曲的回廊</code></td>
+</tr>
+<tr>
+<td>125-140</td>
+<td>冰封雪域-试炼的洞穴1</td>
+</tr>
+<tr>
+<td>140-150</td>
+<td>神木村-黑翼龙巢穴</td>
+</tr>
+<tr>
+<td>150-170</td>
+<td>废弃都市-星光之塔-6楼发廊&lt;4&gt;</td>
+</tr>
+<tr>
+<td>170-180</td>
+<td>玩具城-UFO内部-走廊H01</td>
+</tr>
+<tr>
+<td>180-200</td>
+<td>被遗弃的挖掘地区2<code>备选：被遗弃的挖掘地区3</code></td>
+</tr>
+<tr>
+<td>200-210</td>
+<td>无名村-无名村洞穴下侧</td>
+</tr>
+<tr>
+<td>210-220</td>
+<td>啾啾村-揪乐森林深处</td>
+</tr>
+<tr>
+<td>220-225</td>
+<td>拉克兰-显露本色之处3</td>
+</tr>
+<tr>
+<td>225-250</td>
+<td>阿尔卡纳-洞穴的下路</td>
+</tr>
+</tbody></table>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/11/22/Link-Lvup/">
+        <i class="iconfont icon-angle-left"></i>
+        <span>Link套制作</span>
+      </a>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/11/20/MapleStory/">
+        <span>TMS——台服MapleStory</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2020/11/22/Lvup_0/" id="toc-header" class="mdui-ripple">Table of Contents</a>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%8F%E9%AA%8C%E5%8A%A0%E6%88%90%E9%81%93%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">经验加成道具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%98%E8%B4%B9%E7%9A%84"><span class="toc-number">1.0.1.</span> <span class="toc-text">付费的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%8D%E8%B4%B9%E7%9A%84"><span class="toc-number">1.0.2.</span> <span class="toc-text">免费的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%87%E7%BA%A7%E7%9A%84%E5%9B%BE%E4%B8%80%E8%88%AC%E8%A6%81%E7%AC%A6%E5%90%88%E4%BB%A5%E4%B8%8B%E5%87%A0%E4%B8%AA%E6%9D%A1%E4%BB%B6"><span class="toc-number">1.0.3.</span> <span class="toc-text">升级的图一般要符合以下几个条件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%83%E7%BA%A7%E7%BA%AF%E5%88%B7%E5%9B%BE%E8%B7%AF%E7%BA%BF"><span class="toc-number">2.</span> <span class="toc-text">练级纯刷图路线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-200"><span class="toc-number">2.0.1.</span> <span class="toc-text">10-200</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#200-275"><span class="toc-number">2.0.2.</span> <span class="toc-text">200-275</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E8%90%8C%E6%96%B0%E7%BB%83%E7%BA%A7"><span class="toc-number">3.</span> <span class="toc-text">从零开始的萌新练级</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E8%8D%92%E8%81%8C%E4%B8%9A%E6%8E%A8%E8%8D%90"><span class="toc-number">3.0.1.</span> <span class="toc-text">开荒职业推荐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%B7%E5%89%AF%E6%9C%AC%E7%BB%83%E7%BA%A7%E8%B7%AF%E7%BA%BF"><span class="toc-number">3.0.2.</span> <span class="toc-text">刷副本练级路线</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%87%E7%BA%A7%E8%B7%AF%E7%BA%BF%E7%AE%80%E5%8C%96%E7%89%88"><span class="toc-number">4.</span> <span class="toc-text">升级路线简化版</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E8%BD%AE%E6%9C%89Link%E5%A5%97%E8%B7%AF%E7%BA%BF"><span class="toc-number">4.0.1.</span> <span class="toc-text">有轮有Link套路线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%A4%E5%AE%B3%E8%BE%83%E4%BD%8E%E7%9A%84%E7%96%BE%E8%B7%91%E8%B7%AF%E7%BA%BF"><span class="toc-number">4.0.2.</span> <span class="toc-text">伤害较低的疾跑路线</span></a></li></ol></li></ol></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2020 - 2020 
+        
+        MAO486
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >
