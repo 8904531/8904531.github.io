@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/iconfont.css">
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+    
+    
+    <title>
+        
+            BOSS掉落 | MapleStory小屋
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/" class="mdui-typo-headline">MapleStory小屋</a>
+    <a href="/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">Overview</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">About</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Home</div>
+                </a>
+            
+                
+                <a href="/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Tags</div>
+                </a>
+            
+                
+                <a href="/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Categories</div>
+                </a>
+            
+                
+                <a href="/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Archives</div>
+                </a>
+            
+                
+                <a href="/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">About</div>
+                </a>
+            
+                
+                <a target="_blank" rel="noopener" href="https://www.neoska.me/link.html" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Link表</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">Night Mode</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/icons/avatar.gif"/>
+                
+            </div>
+            <div class="sidebar-author-name">MAO486</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:mao486@vip.qq.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">Links</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a target="_blank" rel="noopener" href="https://garybear.cn/hexo-theme-meadow/" class="mdui-list-item mdui-ripple">
+                            Meadow说明文档
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    <article id="article" class="mdui-card mdui-p-b-2 mdui-m-b-5">
+  <header class="mdui-card-media">
+    
+    
+      <div class="post-header"> 
+  <a class="post-header-title" href="/2020/11/26/MapleStory-boss/">BOSS掉落</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      Posted on:&nbsp;2020-11-26
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      Edited on:&nbsp;2020-11-26
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      In:&nbsp;<a class="category-link" href="/categories/Boss/">Boss</a>
+    </span>
+    
+      <span>
+        <span class="iconfont icon-eye"></span>
+        Views:&nbsp;
+        <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+      </span>
+    
+  </div>
+</div>   
+    
+
+
+
+    
+    
+    <div class="mdui-card-menu">
+    
+      <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
+      <ul class="mdui-menu" id="share_menu">
+        <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=BOSS掉落&url=https://maplestory.84861540.online/2020/11/26/MapleStory-boss/&pic=https://maplestory.84861540.online/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">Share to Weibo</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://twitter.com/intent/tweet?text=BOSS掉落&url=https://maplestory.84861540.online/2020/11/26/MapleStory-boss/&via=MAO486" target="_blank" class="mdui-ripple">Share to Twitter</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://maplestory.84861540.online/2020/11/26/MapleStory-boss/" target="_blank" class="mdui-ripple">Share to Facebook</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://plus.google.com/share?url=https://maplestory.84861540.online/2020/11/26/MapleStory-boss/" target="_blank" class="mdui-ripple">Share to Google+</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://maplestory.84861540.online/2020/11/26/MapleStory-boss/&title=BOSS掉落" target="_blank" class="mdui-ripple">Share to LinkedIn</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=MapleStory小屋&title=BOSS掉落&summary=&pics=https://maplestory.84861540.online/null&url=https://maplestory.84861540.online/2020/11/26/MapleStory-boss/" target="_blank" class="mdui-ripple">Share to QQ</a>
+        </li>
+        <li class="mdui-menu-item">
+          <a href="https://telegram.me/share/url?url=https://maplestory.84861540.online/2020/11/26/MapleStory-boss/&text=BOSS掉落" target="_blank" class="mdui-ripple">Share to Telegram</a>
+        </li>
+      </ul>
+    
+  </div>
+  </header>
+  
+  
+  
+  
+  <div class="post-tags">
+    
+      <i class="iconfont icon-tag">
+        <a rel="tag" href = /tags/%E6%8E%89%E8%90%BD/ >掉落</a>
+      </i>
+    
+  </div>
+
+  
+  <div class="mdui-card-content mdui-typo mdui-p-x-4">
+    <p>Boss掉落物品</p>
+<a id="more"></a>
+
+<blockquote>
+<p>原文来自巴哈姆特论坛：<a target="_blank" rel="noopener" href="https://forum.gamer.com.tw/C.php?bsn=7650&amp;snA=983110">https://forum.gamer.com.tw/C.php?bsn=7650&amp;snA=983110</a></p>
+<p>群文档</p>
+</blockquote>
+<h3 id="術語簡介"><a href="#術語簡介" class="headerlink" title="術語簡介"></a>術語簡介</h3><ul>
+<li>簡單 = 容易</li>
+<li>一般 = 普通</li>
+<li>困難 = 混沌</li>
+</ul>
+<h3 id="露西妲"><a href="#露西妲" class="headerlink" title="露西妲"></a>露西妲</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>蝴蝶翅膀水滴石</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>蝴蝶翅膀水滴石、神秘幽冥系列 、夢幻的腰帶、露希妲洛伊德 (機器人)</td>
+</tr>
+</tbody></table>
+<h3 id="史烏"><a href="#史烏" class="headerlink" title="史烏"></a>史烏</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>特殊能量硬幣(S級)</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>特殊能量硬幣(S級)、航海系列 、口紅控制器標誌 、史烏機器人、受損的黑心臟 (材料)</td>
+</tr>
+</tbody></table>
+<h3 id="戴米安"><a href="#戴米安" class="headerlink" title="戴米安"></a>戴米安</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>扭曲烙印的靈魂石、毀滅力量盾牌</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>扭曲烙印的靈魂石、航海系列 、毀滅力量盾牌、附有魔力的眼罩</td>
+</tr>
+</tbody></table>
+<h3 id="拉圖斯"><a href="#拉圖斯" class="headerlink" title="拉圖斯"></a>拉圖斯</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>簡單</td>
+<td>強烈的力量結晶</td>
+</tr>
+<tr>
+<td>一般</td>
+<td>強烈的力量結晶</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>拉圖斯標誌 、拉圖斯的時間椅子 、坎特的新護目鏡 、黑豆標記 、水中信紙眼飾 、可疑的方塊、達克泰可 (任務道具)、拉圖斯的象徵 (任務道具)、超級藥水、強烈的力量結晶</td>
+</tr>
+</tbody></table>
+<h3 id="貝倫"><a href="#貝倫" class="headerlink" title="貝倫"></a>貝倫</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>一格多拉世輪石頭、貝倫的頭盔、奇岩礦石之椅、可疑的方塊、下級附加烙印的印章、混沌卷60%、白衣卷軸1%、扭曲的時間精隨 (材料)、下級(力量、敏捷、智慧、幸運)強化秘藥製作法、特殊藥水、強烈的力量結晶、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>破滅的碎片、一格多拉世輪石頭、混炎一格多拉世輪石頭、混沌貝倫的頭盔、奇岩礦石之椅、露塔必思(劍士)幸運道具卷軸、高級潛在能力賦予卷軸、潛在能力賦予卷軸、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+</tbody></table>
+<h3 id="斑斑"><a href="#斑斑" class="headerlink" title="斑斑"></a>斑斑</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>一格多拉世輪石頭、斑斑頭盔、與斑斑一起 (椅子)、可疑的方塊、混沌卷60%、閃亮的特殊紅標記製作法、中級(力量、敏捷、智慧、幸運)強化秘藥製作法、特殊藥水、強烈的力量結晶、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>時間碎片、一格多拉世輪石頭、混炎一格多拉世輪石頭、混沌斑斑頭盔、與斑斑一起 (椅子)、高級潛在能力賦予卷軸、潛在能力賦予卷軸、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+</tbody></table>
+<h3 id="比艾樂"><a href="#比艾樂" class="headerlink" title="比艾樂"></a>比艾樂</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>一格多拉世輪石頭、比艾樂帽、開心的比艾樂 (椅子)、可疑的方塊、扭曲的時間精隨 (材料)、特殊藥水、強烈的力量結晶、</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>嘲弄的碎片、一格多拉世輪石頭、混炎一格多拉世輪石頭、混沌比艾樂帽、開心的比艾樂 (椅子)、潛在能力賦予卷軸</td>
+</tr>
+</tbody></table>
+<h3 id="血腥女王"><a href="#血腥女王" class="headerlink" title="血腥女王"></a>血腥女王</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>一格多拉世輪石頭、皇后的皇冠、怕怕皇后 (椅子)、可疑的方塊、扭曲的時間精隨 (材料)、中級魔力強化秘藥製作法、特殊藥水、強烈的力量結晶</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>吶喊的碎片、一格多拉世輪石頭、混炎一格多拉世輪石頭、混沌皇后的皇冠、怕怕皇后 (椅子)、潛在能力賦予卷軸</td>
+</tr>
+</tbody></table>
+<h3 id="培羅德"><a href="#培羅德" class="headerlink" title="培羅德"></a>培羅德</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>初級</td>
+<td>培羅德初級硬幣、培羅德硬幣、初級培羅德烙印(墜飾、皮帶)</td>
+</tr>
+<tr>
+<td>中級</td>
+<td>培羅德初級硬幣、培羅德硬幣、初級培羅德烙印(墜飾、皮帶)、中級培羅德烙印(墜飾、皮帶)</td>
+</tr>
+<tr>
+<td>高級</td>
+<td>培羅德初級硬幣、培羅德硬幣、初級培羅德烙印(墜飾、皮帶)、中級培羅德烙印(墜飾、皮帶)、高級培羅德烙印(墜飾、皮帶)、超級藥水</td>
+</tr>
+<tr>
+<td>頂級</td>
+<td>培羅德初級硬幣、培羅德硬幣、初級培羅德烙印(墜飾、皮帶)、中級培羅德烙印(墜飾、皮帶)、高級培羅德烙印(墜飾、皮帶)、頂級培羅德烙印(墜飾、皮帶)、愛心樹墮落的鑰匙 、超級藥水</td>
+</tr>
+</tbody></table>
+<h3 id="西格諾斯"><a href="#西格諾斯" class="headerlink" title="西格諾斯"></a>西格諾斯</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>簡單</td>
+<td>黑色破壞的碎片、黑色守護的碎片、純金(引擎、機器手臂、機器腳、身軀架構、電晶體)、光子(套裝、鞋)、超級藥水、強烈的力量結晶、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+<tr>
+<td>一般</td>
+<td>黑色破壞的碎片、黑色守護的碎片、戰國系列 (武器)、獅子心形戰鬥護肩、龍尾巴巫師護肩、帕爾困監視兵護肩、雷本魂獵人護肩、俠客圖斯船長護肩、純金(引擎、機器手臂、機器腳、身軀架構、電晶體)、西格諾斯的王冠 (材料)、夢之石頭 (材料)、女皇系列披風製作法、西格諾斯克希努爾製作法、惡魔(賢者盾、黑暗盾、戰士盾)製作法、特殊體力恢復(藥水、藥丸)製作法、特殊魔力恢復(藥水、藥丸)製作法、女神之力-(楓幣減免、潛能之鎖)、150 靈魂卷軸 60% (Lv100 - Lv150)</td>
+</tr>
+</tbody></table>
+<h3 id="梅格奈斯"><a href="#梅格奈斯" class="headerlink" title="梅格奈斯"></a>梅格奈斯</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>簡單</td>
+<td>影子商團金幣、凱撒 (武器)、水晶溫杜斯徽章 (胸章)、皇家暗黑合金護肩、赫力席母精銳戰士(披風、腰帶、靴) 、赫力席母精銳法師(披風、腰帶、靴) 、赫力席母精銳弓手(披風、腰帶、靴) 、赫力席母精銳盜賊(披風、腰帶、靴) 、赫力席母精銳海賊(披風、腰帶、靴) 、超新星海亞蒂絲(斗篷、腰帶、靴) 、超新星赫密士(斗篷、腰帶、靴) 、超新星喀戎星(斗篷、腰帶、靴) 、超新星萊卡翁(斗篷、腰帶、靴) 、超新星亞泰爾(斗篷、腰帶、靴) 、可疑的方塊、扭曲的時間精隨 (材料)、特殊藥水、強烈的力量結晶、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+<tr>
+<td>一般</td>
+<td>影子商團金幣、凱撒 (武器)、水晶溫杜斯徽章 (胸章)、皇家暗黑合金護肩、赫力席母精銳戰士(披風、腰帶、靴)、赫力席母精銳法師(披風、腰帶、靴)、赫力席母精銳弓手(披風、腰帶、靴)、赫力席母精銳盜賊(披風、腰帶、靴)、赫力席母精銳海賊(披風、腰帶、靴)、超新星海亞蒂絲(斗篷、腰帶、靴)、超新星赫密士(斗篷、腰帶、靴)、超新星喀戎星(斗篷、腰帶、靴)、超新星萊卡翁(斗篷、腰帶、靴)、超新星亞泰爾(斗篷、腰帶、靴)、可疑的方塊、下級附加烙印的印章、扭曲的時間精隨 (材料)、超級藥水、女神之力-(楓幣減免、潛能之鎖)、強烈的力量結晶、150 靈魂卷軸 60% (Lv100 - Lv150)</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>影子商團金幣、梅格奈斯金幣、被詛咒的凱撒利恩 (武器)、水晶溫杜斯徽章 (胸章)、皇家暗黑合金護肩、塔蘭特(海亞蒂絲、赫密士、喀戎星、萊卡翁、亞泰爾)斗篷、赫力席母精銳戰士(披風、腰帶、靴)、赫力席母精銳法師(披風、腰帶、靴)、赫力席母精銳弓手(披風、腰帶、靴)、赫力席母精銳盜賊(披風、腰帶、靴)、赫力席母精銳海賊(披風、腰帶、靴)、超新星海亞蒂絲(斗篷、腰帶、靴)、超新星赫密士(斗篷、腰帶、靴)、超新星喀戎星(斗篷、腰帶、靴)、超新星萊卡翁(斗篷、腰帶、靴)、超新星亞泰爾(斗篷、腰帶、靴)、女神之力-(楓幣減免、潛能之鎖)、150 靈魂卷軸 60% (Lv100 - Lv150)</td>
+</tr>
+</tbody></table>
+<h3 id="殘暴炎魔"><a href="#殘暴炎魔" class="headerlink" title="殘暴炎魔"></a>殘暴炎魔</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>簡單</td>
+<td>殘暴炎魔的樹枝 (武器)、殘暴炎魔頭盔、頭目名譽勳章、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+<tr>
+<td>一般</td>
+<td>殘暴炎魔的樹枝 (武器)、殘暴炎魔系列 (武器)、殘暴炎魔頭盔、水中信紙眼飾 (眼飾)、凝聚力量的結晶石 (臉飾)、殘暴炎魔的象徵 (任務道具)、下級附加烙印的印章、混沌卷60%、高級巨大藥水製作法、中級英雄秘藥製作法、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>殘暴炎魔系列 (武器)、混沌殘暴炎魔的樹枝 (武器)、混沌殘暴炎魔頭盔、憤怒的殘暴炎魔的(頭盔、披風、腰帶)、戰國系列 (鞋子)、水中信紙眼飾 (眼飾)、凝聚力量的結晶石 (臉飾)、殘暴炎魔的象徵 (任務道具)、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+</tbody></table>
+<h3 id="闇黑龍王"><a href="#闇黑龍王" class="headerlink" title="闇黑龍王"></a>闇黑龍王</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>簡單</td>
+<td>銀花戒指、戴雅希杜斯耳環、九靈龍的蛋 (任務道具)、獲得財物秘藥製作法、中級魔力強化秘藥製作法、中級(力量、敏捷、智慧、幸運)強化秘藥製作法</td>
+</tr>
+<tr>
+<td>一般</td>
+<td>闇黑龍王項鍊、銀花戒指、戴雅希杜斯耳環、闇黑龍王怪物收藏蛋、可疑的方塊、九靈龍的蛋 (任務道具)、覺醒秘藥製作法、中級(力量、敏捷、智慧、幸運)強化秘藥製作法、下級英雄秘藥製作法、強烈的力量結晶、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>混沌闇黑龍王項鍊、銀花戒指、戴雅希杜斯耳環、混沌闇黑龍王怪物收藏蛋、可疑的方塊、混沌卷60%、九靈龍的蛋 (任務道具)、超級藥水、強烈的力量結晶、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+</tbody></table>
+<h3 id="阿卡伊農"><a href="#阿卡伊農" class="headerlink" title="阿卡伊農"></a>阿卡伊農</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>簡單</td>
+<td>梅克奈特墜飾、光子(套裝、鞋)、扭曲時間的碎片 (支配者墜飾強化專用)、可疑的方塊、潛在能力賦予卷軸、時間之石 (材料)、扭曲的時間精隨 (材料)、異界的秘藥、經驗累積的秘藥、獲得財物的秘藥、忍耐的秘藥、覺醒的秘藥、無敵的秘藥、支配者墜飾製作法、阿克路德穿甲戒指製作法、奧拉克之穿甲之戒製作法、嗜血狂騎之永恆之戒製作法、守護拳套永恆之戒製作法、特殊藥水、頭目名譽勳章、女神之力-(楓幣減免、潛能之鎖)、強烈的力量結晶、靈魂卷軸 60% (Lv120 - Lv135)</td>
+</tr>
+<tr>
+<td>一般</td>
+<td>支配者墜飾、梅克奈特墜飾、純金身軀架構、扭曲時間的碎片 (支配者墜飾強化專用)、可疑的方塊、時間之石 (材料)、太初之精隨 (材料)、混沌之碎片 (材料)、扭曲的時間精隨 (材料)、經驗累積的秘藥、獲得財物的秘藥、忍耐的秘藥、覺醒的秘藥、無敵的秘藥、支配者墜飾製作法、奧拉克之穿甲之戒製作法、嗜血狂騎之永恆之戒製作法、守護拳套永恆之戒製作法、特殊體力恢復(藥水、藥丸)製作法、特殊魔力恢復(藥水、藥丸)製作法、強烈的力量結晶、女神之力-(楓幣減免、潛能之鎖)、150 靈魂卷軸 60% (Lv100 - Lv150)</td>
+</tr>
+</tbody></table>
+<h3 id="皮卡啾"><a href="#皮卡啾" class="headerlink" title="皮卡啾"></a>皮卡啾</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>黑豆標記 (眼飾)、粉紅聖杯 (口袋道具)、金花草腰帶、可疑的方塊、下級附加烙印的印章、時間之石 (材料)、扭曲的時間精隨 (材料)、經驗累積的秘藥、獲得財物的秘藥、忍耐的秘藥、覺醒的秘藥、無敵的秘藥、忍耐秘藥製作法、特殊體力恢復(藥水、藥丸)製作法、特殊魔力恢復(藥水、藥丸)製作法、超級藥水、強烈的力量結晶、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>黑豆標記 (眼飾)、粉紅聖杯 (口袋道具)、金花草腰帶、黑啾(帽、套裝)、混沌皮卡啾(帽、套裝)、戰國系列 (披風、腰帶)、可疑的方塊、時間之石 (材料)、扭曲的時間精隨 (材料)、潛在能力賦予卷軸、經驗累積的秘藥、獲得財物的秘藥、忍耐的秘藥、覺醒的秘藥、無敵的秘藥、獲得財物秘藥製作法、特殊體力恢復(藥水、藥丸)製作法、特殊魔力恢復(藥水、藥丸)製作法、超級藥水、強烈的力量結晶、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+</tbody></table>
+<h3 id="希拉"><a href="#希拉" class="headerlink" title="希拉"></a>希拉</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>[寵物箱子] 暗黑之魂<code>暗黑之魂 (寵物)、黑暗靈魂的耳環 (寵物裝備)</code>、地獄火耳環、永生之石 (口袋道具)、附魔系列 (武器、防具)、附魔戰士幸運道具卷軸、可疑的方塊、希拉寵物訓練書:黑暗靈魂篇、特殊藥水、強烈的力量結晶、女神之力-(楓幣減免、潛能之鎖)、靈魂卷軸 60% (Lv120 - Lv135)</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>[寵物箱子] 暗黑之魂<code>暗黑之魂 (寵物)、黑暗靈魂的耳環 (寵物裝備)</code>、暗黑之魂的強化寶石 (暗黑之魂的飾品強化專用)、暗黑之魂的魔力石 (暗黑之魂的飾品強化專用)、地獄火耳環、永生之石 (口袋道具)、戰國系列 (肩章)、附魔系列 (武器、防器)、附魔戰士幸運道具卷軸、附魔單手武器(攻擊力、魔力)卷軸60%、附魔雙手武器(攻擊力、魔力)卷軸60%、可疑的方塊、希拉寵物訓練書:黑暗靈魂篇、超級藥水、強烈的力量結晶、女神之力-(楓幣減免、潛能之鎖)、150 靈魂卷軸 60% (Lv100 - Lv150)</td>
+</tr>
+</tbody></table>
+<h3 id="森蘭丸"><a href="#森蘭丸" class="headerlink" title="森蘭丸"></a>森蘭丸</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>戰國系列 (鎧甲)、潛在能力賦予卷軸、裝備強化卷軸</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>戰國系列 (武器)、戰國系列 (頭盔、鎧甲、手套)</td>
+</tr>
+</tbody></table>
+<h3 id="庫洛斯"><a href="#庫洛斯" class="headerlink" title="庫洛斯"></a>庫洛斯</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>簡單</td>
+<td>魔性的碎片、查‧克羅斯、強力的魔性首飾、黑血魔人團傷害字型、火牢術飛鏢、弓專用 超合金箭矢、弩專用 超合金箭矢、巨人彈丸、萬能療傷藥、超級藥水、特殊藥水</td>
+</tr>
+<tr>
+<td>一般</td>
+<td>魔性的碎片、強力的魔性(首飾、戒指)、查‧克羅斯、黑血魔人團傷害字型、火牢術飛鏢、弓專用 超合金箭矢、弩專用 超合金箭矢、巨人彈丸、萬能療傷藥</td>
+</tr>
+</tbody></table>
+<h3 id="凡雷恩"><a href="#凡雷恩" class="headerlink" title="凡雷恩"></a>凡雷恩</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>簡單</td>
+<td>獅子王的獎牌、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+<tr>
+<td>一般</td>
+<td>獅子王的獎牌、女神之力-(楓幣減免、潛能之鎖)</td>
+</tr>
+<tr>
+<td>困難</td>
+<td>皇家凡雷恩系列 (武器、防具)、依菲雅的(戒指、耳環)</td>
+</tr>
+</tbody></table>
+<h3 id="濃姬"><a href="#濃姬" class="headerlink" title="濃姬"></a>濃姬</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>分身</td>
+<td>比叡山本堂的鑰匙</td>
+</tr>
+<tr>
+<td>本尊</td>
+<td>妖蝶姬的(小寶箱、寶物箱、秘寶箱)<code>濃姬特效交換卷、濃姬傷害字型、妖蝶姬之花寶石、妖蝶姬之控制器、妖蝶姬之(妖章、祈念珠、花鎖、小太刀)、妖蝶姬之(咒式矢、魅翅、花戒、鏃)、妖蝶姬之(炎惑書、水豔書、金蠱書、魂珠、魔笛、龍神記、咒玉、花扇)、妖蝶姬之(花牌、紫鞘、咒符)、妖蝶姬之(骸手鐲、照準器、妖藥)、妖蝶姬之座椅、妖蝶姬之龍咒水升級券 (凱撒副武強化專用)、妖蝶姬之魂戒升級券 (天使破壞者副武強化專用)、妖蝶姬之咒楯升級券 (惡魔殺手、惡魔復仇者副武強化專用)、妖蝶姬之魔彈升級券 (機甲戰神副武強化專用)、藍&amp;黑(陰陽師)SS交換券 (僅陰陽師能抽到；使用後無法再次取得)、青&amp;黑(劍豪)SS交換券 (僅劍豪能抽到；使用後無法再次取得)、來路不明的情書</code></td>
+</tr>
+</tbody></table>
+<h3 id="烏勒斯"><a href="#烏勒斯" class="headerlink" title="烏勒斯"></a>烏勒斯</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>動物的(骨頭、毛)、硬化直皮、烏勒斯的皮革、烏勒斯的(爪子、腳底、大齒)、烏勒斯的(精隨、靈魂碎片)、烏勒斯的(角、腿裝飾、肩裝飾)</td>
+</tr>
+</tbody></table>
+<h3 id="艾畢奈亞"><a href="#艾畢奈亞" class="headerlink" title="艾畢奈亞"></a>艾畢奈亞</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>艾畢奈亞的戒指</td>
+</tr>
+</tbody></table>
+<h3 id="卡翁"><a href="#卡翁" class="headerlink" title="卡翁"></a>卡翁</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>卡翁零件 (賣商店可得10萬楓幣)</td>
+</tr>
+</tbody></table>
+<h3 id="海怒斯"><a href="#海怒斯" class="headerlink" title="海怒斯"></a>海怒斯</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>海怒斯模型 (任務道具)、海怒斯的象徵 (任務道具)、150 靈魂卷軸 60% (Lv100 - Lv150)</td>
+</tr>
+</tbody></table>
+<h3 id="船長黑綠水靈"><a href="#船長黑綠水靈" class="headerlink" title="船長黑綠水靈"></a>船長黑綠水靈</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一般</td>
+<td>花朵紋身 (臉飾)、大章魚腳 (材料)、靈魂卷軸 60% (Lv120 - Lv135)</td>
+</tr>
+</tbody></table>
+<h3 id="克梅勒茲"><a href="#克梅勒茲" class="headerlink" title="克梅勒茲"></a>克梅勒茲</h3><table>
+<thead>
+<tr>
+<th>难度</th>
+<th>掉落</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>單航</td>
+<td>克梅勒茲金幣、波賽頓雙刀、波賽頓系列 (武器)、波賽頓系列 (防具)、波賽頓幸運道具卷軸</td>
+</tr>
+<tr>
+<td>團航</td>
+<td>克梅勒茲金幣、波賽頓雙刀、波賽頓系列 (武器、防具)、波賽頓幸運道具卷軸</td>
+</tr>
+</tbody></table>
+
+  </div>
+  <!--文末结束语-->
+  
+    <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="iconfont icon-heartbeat" style="font-size:24px;"></i> The End --- </div>
+  
+  <!--页脚广告-->
+  
+  <div class="mdui-divider"></div>
+  
+  <nav>
+    
+    
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/11/25/MapleStory-alliance/">
+        <span>联盟拼图</span>
+        <i class="iconfont icon-angle-right"></i>
+      </a>
+    
+  </nav>
+</article>
+
+
+
+
+  <div class="toc-button"  style="z-index: 100;">
+    <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item">
+        <a href="/2020/11/26/MapleStory-boss/" id="toc-header" class="mdui-ripple">Table of Contents</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%93%E8%AA%9E%E7%B0%A1%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">術語簡介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%B2%E8%A5%BF%E5%A6%B2"><span class="toc-number">2.</span> <span class="toc-text">露西妲</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%B2%E7%83%8F"><span class="toc-number">3.</span> <span class="toc-text">史烏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%B4%E7%B1%B3%E5%AE%89"><span class="toc-number">4.</span> <span class="toc-text">戴米安</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%89%E5%9C%96%E6%96%AF"><span class="toc-number">5.</span> <span class="toc-text">拉圖斯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B2%9D%E5%80%AB"><span class="toc-number">6.</span> <span class="toc-text">貝倫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%91%E6%96%91"><span class="toc-number">7.</span> <span class="toc-text">斑斑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%89%BE%E6%A8%82"><span class="toc-number">8.</span> <span class="toc-text">比艾樂</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%80%E8%85%A5%E5%A5%B3%E7%8E%8B"><span class="toc-number">9.</span> <span class="toc-text">血腥女王</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%B9%E7%BE%85%E5%BE%B7"><span class="toc-number">10.</span> <span class="toc-text">培羅德</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A5%BF%E6%A0%BC%E8%AB%BE%E6%96%AF"><span class="toc-number">11.</span> <span class="toc-text">西格諾斯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%85%E6%A0%BC%E5%A5%88%E6%96%AF"><span class="toc-number">12.</span> <span class="toc-text">梅格奈斯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AE%98%E6%9A%B4%E7%82%8E%E9%AD%94"><span class="toc-number">13.</span> <span class="toc-text">殘暴炎魔</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%87%E9%BB%91%E9%BE%8D%E7%8E%8B"><span class="toc-number">14.</span> <span class="toc-text">闇黑龍王</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BF%E5%8D%A1%E4%BC%8A%E8%BE%B2"><span class="toc-number">15.</span> <span class="toc-text">阿卡伊農</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9A%AE%E5%8D%A1%E5%95%BE"><span class="toc-number">16.</span> <span class="toc-text">皮卡啾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%8C%E6%8B%89"><span class="toc-number">17.</span> <span class="toc-text">希拉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A3%AE%E8%98%AD%E4%B8%B8"><span class="toc-number">18.</span> <span class="toc-text">森蘭丸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%AB%E6%B4%9B%E6%96%AF"><span class="toc-number">19.</span> <span class="toc-text">庫洛斯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%A1%E9%9B%B7%E6%81%A9"><span class="toc-number">20.</span> <span class="toc-text">凡雷恩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BF%83%E5%A7%AC"><span class="toc-number">21.</span> <span class="toc-text">濃姬</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%83%8F%E5%8B%92%E6%96%AF"><span class="toc-number">22.</span> <span class="toc-text">烏勒斯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%89%BE%E7%95%A2%E5%A5%88%E4%BA%9E"><span class="toc-number">23.</span> <span class="toc-text">艾畢奈亞</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%A1%E7%BF%81"><span class="toc-number">24.</span> <span class="toc-text">卡翁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%B7%E6%80%92%E6%96%AF"><span class="toc-number">25.</span> <span class="toc-text">海怒斯</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%88%B9%E9%95%B7%E9%BB%91%E7%B6%A0%E6%B0%B4%E9%9D%88"><span class="toc-number">26.</span> <span class="toc-text">船長黑綠水靈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%8B%E6%A2%85%E5%8B%92%E8%8C%B2"><span class="toc-number">27.</span> <span class="toc-text">克梅勒茲</span></a></li></ol>
+      </li>
+    </ul>
+  </div>
+
+
+
+    <div id="comment" class="mdui-card mdui-p-a-2 mdui-m-b-5">
+      <div class="mdui-tab" mdui-tab>
+        
+          <a href="#comment-tab0" class="mdui-ripple">gitalk</a>
+        
+          <a href="#comment-tab1" class="mdui-ripple">livere</a>
+        
+      </div>
+      
+        <div id="comment-tab0" class="mdui-p-a-2">
+          <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id:  md5(location.pathname) ,
+    distractionFreeMode: 'true',
+  });
+  gitalk.render('gitalk-container');
+</script>
+        </div>
+      
+        <div id="comment-tab1" class="mdui-p-a-2">
+          <div id="lv-container" data-id="city" data-uid="">
+  <script type="text/javascript">
+    (function (d, s) {
+      var j, e = d.getElementsByTagName(s)[0];
+      if (typeof LivereTower === 'function') { return; }
+      j = d.createElement(s);
+      j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+      j.async = true;
+      e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by LiveRe.</noscript>
+</div>
+        </div>
+      
+    </div>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2020 - 2020 
+        
+        MAO486
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>Total Visitors <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>Total Views <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
+
+
+
+
+    
+<script src="/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/js/meadow.js"></script>
+
+</body>
+</html >
